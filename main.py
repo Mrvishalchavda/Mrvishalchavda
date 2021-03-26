@@ -166,12 +166,12 @@ def iscolide(px, py, up ,dp):
         # print(f"checking pipe with {pmidpointx} & pipe valu is {upper['x']} & {upper['x'] + game_sprite['pipeup'].get_width()}")
         if   upper['x'] < pmidpointx < upper['x'] + game_sprite['pipeup'].get_width():
             # print("running first if")
+            if   upper['x'] < pmidpointx < upper['x'] + game_sprite['pipeup'].get_width():
+            # print("running first if")
             print(f"checking pipe with {int(pmidpointy)} & pipe valu is {lower['y'] + game_sprite['pipeup'].get_height()} & {upper['y']}")
-            if int(pmidpointy) > upper['y']:
-                print("task exexutive")
-                if (lower['y'] + game_sprite['pipeup'].get_height()) < int(pmidpointy) :
-                    revalue = True
-                    print("its your fault")
+            if int(lower['y'] + game_sprite['pipeup'].get_height()) > int(pmidpointy) or int(pmidpointy) > upper['y']:
+                revalue = True
+                print("its your fault")
                 # (lower['y'] + game_sprite['pipeup'].get_height()) < 
     # print(f"player x position is ({px},{py}) & {game_sprite['player'].get_width()} ,{game_sprite['player'].get_height()}")
     # print(f"player x position is ({pmidpointx},{pmidpointy})\n upperpipe list is{up}\n downpipe list is{dp}")
